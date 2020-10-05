@@ -1,6 +1,6 @@
 # VR Project 1
 
-For our first project we are representing our personal covid space. An area where we spent/had spent most of our time since the start of the covid pandemic. With everything going on, I felt much safer within my room.
+For our first project we are representing our personal covid space. An area where we spent/had spent most of our time since the start of the covid pandemic. With everything going on, I felt much safer within my room. It was a very cozy place and I did not have to worry about interacting or coming into contact with others. Keeping me safe with the social distancing requirements.
 
 
 # Link to Demo Vid
@@ -16,7 +16,7 @@ https://xjenkins-vrproject1.glitch.me
 
 # Covid Button Demo
 
-
+![](https://github.com/xavierjenkins99/VR-Project1/blob/master/CovidButtonDemo.gif)
 
 
 
