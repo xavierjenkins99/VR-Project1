@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-play-sound-on-event@1.0.2/dist/aframe-play-sound-on-event.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
+    <script src="./Audio.html"></script>
+    <script src="./audio-toggle.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene stats>
+      
+      <!--Camera-->
+     <a-entity id="rig" movement-controls position="0 0 0">
+        <!-- Camera -->
+        <a-entity camera position="0 1.5 0" look-controls="pointerLockEnabled:
+          true">
+
+
+          <!-- Cursor 
+          <a-entity cursor raycaster="far: .5" position="0 0 -0.3"
+            geometry="primitive: ring; radiusInner: 0.003; radiusOuter: 0.005"
+            material="color: #EE6C15">
+          </a-entity> -->
+          <a-cursor></a-cursor>
+        </a-entity>
+
+      </a-entity>
+      
+      <a-assets>
+        <!--Sound Asset-->
+        <audio id="Megalovania" src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2FUndertale%20-%20Megalovania%20(128%20kbps)%20(mp3cut.net).mp3?v=1601766053918"></audio>
+        <audio id="Transformers" src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2FThe%20Touch%20(mp3cut.net).mp3?v=1601849770990"></audio>
+        
+        <!--Objects-->
+        <a-gltf-model id="Sans" src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2FSans.glb?v=1601353244113"></a-gltf-model>
+        <a-gltf-model id="Bedroom" src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2FBedroom.glb?v=1601354165306"></a-gltf-model>
+        <a-gltf-model id="Optimus" src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2FOptimus.glb?v=1601401707148"></a-gltf-model>
+        <a-gltf-model id="Ceiling" src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2Fceiling.glb?v=1601491970426"></a-gltf-model>
+        
+        <!-- On Floor -->
+        <a-gltf-model id="Dresser" src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2Fdresser.glb?v=1601847342064"></a-gltf-model>
+        <a-gltf-model id="Bed" src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2FBed.glb?v=1601401654944"></a-gltf-model>
+        <a-gltf-model id="GamingChair" src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2FGamingChair.glb?v=1601401678232"></a-gltf-model>
+        
+        
+        
+        <!-- On Desk -->
+        <a-gltf-model id="Desk" src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2Fdesk.glb?v=1601401661316"></a-gltf-model>
+        <a-gltf-model id="PC" src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2FGamingPc.glb?v=1601401693453"></a-gltf-model>
+        <a-gltf-model id="Monitor1" src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2FGaminMonitors.glb?v=1601401686602"></a-gltf-model>
+        <a-gltf-model id="Monitor2" src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2FGaminMonitor2.glb?v=1601410345124"></a-gltf-model>
+        <a-gtlf-model id="Tablet" src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2FDrawingTablet.glb?v=1601401665910"></a-gtlf-model>
+        <a-gltf-model id="WhiteWall" src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2FWhiteWall.glb?v=1601488624450"></a-gltf-model>
+        <a-gltf-model id="MonsterCan1" src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2FMonsterCan.glb?v=1601852305115"></a-gltf-model>
+        <a-gltf-model id="MonsterCan2" src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2FMonsterCan.glb?v=1601852305115"></a-gltf-model>
+        <a-gltf-model id="MonsterCan3" src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2FMonsterCan.glb?v=1601852305115"></a-gltf-model>
+        <a-gltf-model id="MonsterCan4" src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2FMonsterCan.glb?v=1601852305115"></a-gltf-model>
+        
+        
+      <!--Texture-->
+      </a-assets>
+      
+      <!--Objects in Scene-->
+      <a-entity sound="src: #Megalovania"></a-entity>
+      <a-entity gltf-model="#Sans" position="0.22086 0.80967 3.14431" rotation="-180 -1.86 -180" scale="0.01795 0.01795 0.01795"></a-entity>
+      <a-entity gltf-model="#Bedroom" position="0 0 0.757" rotation="-0.010 0.055 0" scale="1.530 1.090 1.521"></a-entity>
+      <a-entity gltf-model="#Desk" position="-2.420 0.031 -0.971" rotation="-0.010 0.055 0" scale="0.005 0.003 0.004"></a-entity>
+      <a-entity gltf-model="#Dresser" position="4.13982 0 2.802" rotation="-0.01 -178.947 -0.001" scale="1.442 0.905 1.23"></a-entity>
+      <a-entity gltf-model="#PC" position="-2.678 0.955 -1.172" rotation="-1.010 88.890 -0.001" scale="1.442 1.461 1.680"></a-entity>
+      <a-entity gltf-model="#Monitor1" position="-4.150 0.438 -0.367" rotation="-1.010 29.880 -0.001" scale="0.015 0.015 0.015"></a-entity>
+      <a-entity gltf-model="#Monitor2" position="-2.595 0.438 -1.876" rotation="-1.010 -30.301 -0.001" scale="0.015 0.015 0.015"></a-entity>
+      <a-entity gltf-model="#Optimus" position="1.277 0.5942 2.489" rotation="0 -141.357 0" scale="0.08851 0.08851 0.08851"></a-entity>
+      <a-entity gltf-model="#Tablet" position="-2.070 0.613 -0.842" rotation=" 0 0 0" scale="0.020 0.020 0.020"></a-entity>
+      <a-entity gltf-model="#Bed" position="0.296 0 -0.01743" scale="0.14467 0.12235 0.13282"></a-entity>
+      <a-entity gltf-model="#GamingChair" scale="0.37 0.37 0.37" position="-2.7434 -0.56974 0.05519" rotation="0 179.35240565200647 0"></a-entity>
+      <a-entity gltf-model="#Ceiling" scale="0.01 0.01 0.01" position="0.941 1.931 1.702" rotation="8.586 0 0"></a-entity>
+      
+      <!-- Monster Cans -->
+      <a-entity gltf-model="#MonsterCan1" id="Can1" visible="false" scale="0.005 0.005 0.005" position="-1.357 0.63152 -0.68595"></a-entity>
+      <a-entity gltf-model="#MonsterCan2" id="Can2" visible="false" scale="0.005 0.005 0.005" position="-1.435 0.626 -0.66316"></a-entity>
+      <a-entity gltf-model="#MonsterCan3" scale="0.005 0.005 0.005" position="-1.54731 0.659 -0.7385" rotation="88.131 -1.9440457988788833 19.240495718288173"></a-entity>
+      <a-entity gltf-model="#MonsterCan4" scale="0.005 0.005 0.005" position="-1.28222 0.631 -0.64364"></a-entity>
+      
+      
+      <!--Sound for Sans and Optimus-->
+      <a-sound material="opacity:0" geometry="primitive:box"
+          position="0.17339 0.98403 2.97845"
+          scale="0.66263 0.60072 2.37855"
+          src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2FUndertale%20-%20Megalovania%20(128%20kbps)%20(mp3cut.net).mp3?v=1601766053918" on="click"></a-sound>
+      
+      <a-sound material="opacity:0" geometry="prmitive:box"
+               position="1.3 1.06527 3.20663"
+               scale="0.71538 0.71538 1.66127"
+               src="https://cdn.glitch.com/cd5ad693-91d1-4a7c-b4b0-520724ef94b4%2FThe%20Touch%20(mp3cut.net).mp3?v=1601849770990" on="click"></a-sound>
+      
+      <!-- Button Stuff -->
+      <a-entity id="switch1" position="0 1 0" geometry="primative:box" scale="0.142 0.142 0.14209" material="color:#ff0000" 
+                event-set__1="_event: click; _target: #Can1; visible: true"
+                event-set__2="_event: click; _target: #Can2; visible: true"
+                ></a-entity>
+      <a-entity id="switch2" position="3 1 0" geometry="primative:box" scale="0.142 0.142 0.14209" material="color:#ff0020"
+                event-set__1="_event: click; _target: #Can1; visible: false"
+                event-set__2="_event: click; _target: #Can2; visible: false"
+                
+                ></a-entity>
+     
+      
+      <!--Walls and Such-->
+      <a-entity gltf-model="#WhiteWall" position="-0.34915 -0.43554 -0.38411" scale="0.18363 0.2307 0.12711"></a-entity>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
